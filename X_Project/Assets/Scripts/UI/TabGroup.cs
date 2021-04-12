@@ -23,7 +23,11 @@ public class TabGroup : MonoBehaviour
     protected void SetTabState(int index, bool picked)
     {
         TabPair affectedItem = TabCollection[index];
-        affectedItem.TabContent.SetActive(picked);        
+        affectedItem.TabContent.SetActive(picked);
+        if (picked)
+        {
+            affectedItem.TabButton.Select();
+        }
         //affectedItem.TabButton.image.sprite = picked ? TabIconPicked : TabIconDefault;
     }
 

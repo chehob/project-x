@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8eade6dc7db6f247924cc5151e8d563, type: 3}
+  m_Name: StrategyScreenData
+  m_EditorClassIdentifier: 
+  _guid: 361bbcfe4fbf3074ea26d57549382478
+  description: 
+  sceneType: 0
+  sceneReference:
+    m_AssetGUID: e0b03837e1ee76448af682af99f5682d
+    m_SubObjectName: 
+    m_SubObjectType: 

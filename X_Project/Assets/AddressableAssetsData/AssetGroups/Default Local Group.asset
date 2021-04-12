@@ -16,7 +16,37 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d16f667e01f9abc48866ce89338273a3
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: fd00a126fe49460488813196abc6caa1
+    m_Address: Assets/Scenes/PersistentManagers.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2cda990e2423bbf4892e6590ba056729
+    m_Address: Assets/Scenes/Gameplay.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 50a633677878cda47ab26768807bb29e
+    m_Address: Assets/Scenes/Screens/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 32f9a48c83258c94da6a23f6b22bea9a
+    m_Address: Assets/ScriptableObjects/Requests/LoadSceneRequests/LoadSceneRequest.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e0b03837e1ee76448af682af99f5682d
+    m_Address: Assets/Scenes/Screens/Base.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f7a72967e22d41642b301dcb110261a3, type: 2}
   m_SchemaSet:
