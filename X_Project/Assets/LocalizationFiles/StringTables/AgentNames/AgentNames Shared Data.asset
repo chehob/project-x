@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: AgencyScreen Shared Data
+  m_Name: AgentNames Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: AgencyScreen
-  m_TableCollectionNameGuidString: 9859a93ad6396bb4ba4356047e11e580
+  m_TableCollectionName: AgentNames
+  m_TableCollectionNameGuidString: 3e5d5732284075643a715f84fbb51b99
   m_Entries:
-  - m_Id: 4536825724928
-    m_Key: Cases
+  - m_Id: 11033296896
+    m_Key: Mulder
     m_Metadata:
       m_Items: []
-  - m_Id: 2017516710969344
-    m_Key: Agents
+  - m_Id: 79643721728
+    m_Key: Scully
     m_Metadata:
       m_Items: []
   m_Metadata:
@@ -32,4 +32,4 @@ MonoBehaviour:
     00000000:
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1618144029260
+        m_CustomEpoch: 1618879757647

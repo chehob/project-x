@@ -6,6 +6,17 @@ public class Agency : ScriptableObject
 {
     [SerializeField]
     private List<Case> _cases = default;
+    [SerializeField]
+    private List<Agent> _agents = default;
 
     public List<Case> Cases => _cases;
+    public List<Agent> Agents => _agents;
+
+    void OnValidate()
+    {
+        foreach(Agent agent in _agents)
+        {
+            agent.OnValidate();
+        }
+    }
 }

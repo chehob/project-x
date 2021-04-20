@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cases:
   - {fileID: 11400000, guid: 36d0620df259d9941922772bc91a603b, type: 2}
+  _agents:
+  - _name: 
+    _presetData: {fileID: 11400000, guid: ffe19d9b4134af14e88c1c21e86db3f7, type: 2}
+  - _name: 
+    _presetData: {fileID: 11400000, guid: 5ad0923df37396f4c9a99dc682f2ea1c, type: 2}

@@ -22,5 +22,9 @@ MonoBehaviour:
     m_Localized: Cases
     m_Metadata:
       m_Items: []
+  - m_Id: 2017516710969344
+    m_Localized: Agents
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
