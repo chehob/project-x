@@ -1,5 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.Localization.Settings;
+using System.Linq;
+
+[InitializeOnLoad]
+public class Startup
+{
+    static Startup()
+    {
+        LocalizationSettings.InitializationOperation.Completed += op =>
+        {
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault();
+            LocalizationSettings.Instance.SetSelectedLocale(locale);
+        };        
+    }
+}
 
 [Serializable]
 public class Agent
@@ -15,7 +31,7 @@ public class Agent
 
     public void OnValidate()
     {
-        if(_presetData != null)
+        if (_presetData != null)
         {
             _presetData.Name.GetLocalizedString().Completed += op => _name = op.Result;
         }

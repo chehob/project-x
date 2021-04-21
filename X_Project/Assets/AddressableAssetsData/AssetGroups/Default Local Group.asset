@@ -47,6 +47,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 1fa346e5d239e04469e9addcb97c9e22
+    m_Address: Assets/ScriptableObjects/Gameplay/Agency/AgencyData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f7a72967e22d41642b301dcb110261a3, type: 2}
   m_SchemaSet:

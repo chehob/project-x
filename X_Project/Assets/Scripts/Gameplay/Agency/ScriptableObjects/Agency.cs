@@ -14,7 +14,7 @@ public class Agency : ScriptableObject
 
     void OnValidate()
     {
-        foreach(Agent agent in _agents)
+        foreach (Agent agent in _agents)
         {
             agent.OnValidate();
         }
