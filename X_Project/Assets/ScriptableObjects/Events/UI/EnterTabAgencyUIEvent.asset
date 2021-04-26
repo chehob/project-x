@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb182baa5e6d7874c8465a8ed3a9f093, type: 3}
-  m_Name: ChangeTabAgencyUIEvent
+  m_Name: EnterTabAgencyUIEvent
   m_EditorClassIdentifier: 

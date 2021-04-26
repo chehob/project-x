@@ -9,72 +9,100 @@ using UnityEngine.UI;
 [Serializable]
 public class TabPair
 {
-    public Button TabButton;
+    public TabButton TabButton;
     public GameObject TabContent;
 }
 
 public class TabGroup : MonoBehaviour
 {
+    [SerializeField] private TabEventChannelSO _clickTabEvent = default;
+    [SerializeField] private TabEventChannelSO _enterTabEvent = default;
+    [SerializeField] private TabEventChannelSO _exitTabEvent = default;
+
     public TabPair[] TabCollection;
-    public Button DefaultTab;
+    public TabButton DefaultTab;
+    public Color TabIdleColor;
+    public Color TabActiveColor;
+    public Color TabHoverColor;
 
-    protected int CurrentTabIndex { get; set; }
+    protected TabButton CurrentTab { get; set; }
 
-    protected void SetTabState(int index, bool picked)
-    {
-        TabPair affectedItem = TabCollection[index];
+    protected void SetTabState(TabButton tabButton, bool picked)
+    {        
+        TabPair affectedItem = TabCollection.FirstOrDefault(tp => tp.TabButton == tabButton);
         affectedItem.TabContent.SetActive(picked);
-        if (picked)
-        {
-            affectedItem.TabButton.Select();
-        }
-        //affectedItem.TabButton.image.sprite = picked ? TabIconPicked : TabIconDefault;
+        affectedItem.TabButton.Background.color = picked ? TabActiveColor : TabIdleColor;
     }
 
-    public void PickTab(int index)
+    public void PickTab(TabButton tabButton)
     {
-        SetTabState(CurrentTabIndex, false);
-        CurrentTabIndex = index;
-        SetTabState(CurrentTabIndex, true);
+        SetTabState(CurrentTab, false);
+        CurrentTab = tabButton;
+        SetTabState(CurrentTab, true);
     }
 
-    protected int? FindTabIndex(Button tabButton)
+    protected int FindTabIndex(TabButton tabButton)
     {
+        int index = 0;
         var currentTabPair = TabCollection.FirstOrDefault(x => x.TabButton == tabButton);
         if (currentTabPair == default)
         {
             Debug.LogWarning("The tab " + DefaultTab.gameObject.name + " does not belong to the tab strip " + name + ".");
-            return null;
+            return index;
         }
-        return Array.IndexOf(TabCollection, currentTabPair);
+
+        index = Array.IndexOf(TabCollection, currentTabPair);
+        if(index == -1)
+        {
+            index = 0;
+        }
+        return index;
     }
 
     protected void OnEnable()
     {
         //Initialize all tabs to an unpicked state
-        for (var i = 0; i < TabCollection.Length; i++)
+        foreach (TabPair tp in TabCollection)
         {
-            SetTabState(i, false);
+            SetTabState(tp.TabButton, false);
         }
         //Pick the default tab
         if (TabCollection.Length > 0)
         {
-            var index = FindTabIndex(DefaultTab);
-            //If tab is invalid, instead default to the first tab.
-            if (index == null)
-                index = 0;
-            CurrentTabIndex = index.Value;
-            SetTabState(CurrentTabIndex, true);
+            CurrentTab = DefaultTab;
+            SetTabState(CurrentTab, true);
         }
     }
 
     protected void Start()
     {
-        for (var i = 0; i < TabCollection.Length; i++)
+        if(_clickTabEvent != null)
         {
-            //Storing the current value of i in a locally scoped variable.
-            var index = i;
-            TabCollection[index].TabButton.onClick.AddListener(new UnityAction(() => PickTab(index)));
+            _clickTabEvent.OnEventRaised += PickTab;
+        }
+        if(_enterTabEvent != null)
+        {
+            _enterTabEvent.OnEventRaised += OnTabEnter;
+        }
+        if (_exitTabEvent != null)
+        {
+            _exitTabEvent.OnEventRaised += OnTabExit;
+        }
+    }
+
+    private void OnTabEnter(TabButton tabButton)
+    {
+        if (tabButton != CurrentTab)
+        {
+            tabButton.Background.color = TabHoverColor;
+        }
+    }
+
+    private void OnTabExit(TabButton tabButton)
+    {
+        if (tabButton != CurrentTab)
+        {
+            tabButton.Background.color = TabIdleColor;
         }
     }
 }

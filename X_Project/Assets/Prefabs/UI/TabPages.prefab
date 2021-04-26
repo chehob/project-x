@@ -90,10 +90,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ebde81c13a5d44dbfd2e85014e43c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clickTabEvent: {fileID: 11400000, guid: 1d9a5b25dafe57348a3636627e6d5b53, type: 2}
+  _enterTabEvent: {fileID: 11400000, guid: 9edd6d9f1dbe9274b9a4b6268e3bad6b, type: 2}
+  _exitTabEvent: {fileID: 11400000, guid: 741393cdc3b2bad4eb168cdb2d61e050, type: 2}
   TabCollection:
-  - TabButton: {fileID: 3348345373933487212}
+  - TabButton: {fileID: 382087594456709567}
     TabContent: {fileID: 7272523615514173550}
-  DefaultTab: {fileID: 3348345373933487212}
+  DefaultTab: {fileID: 382087594456709567}
+  TabIdleColor: {r: 1, g: 1, b: 1, a: 1}
+  TabActiveColor: {r: 0, g: 0.5641353, b: 1, a: 1}
+  TabHoverColor: {r: 1, g: 0.66603774, b: 0.2783019, a: 1}
 --- !u!1 &7272523615514173550
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1913561130419695536, guid: b1b763b9004c96c44bec2f7601102e8a, type: 3}
       propertyPath: m_fontSize
-      value: 63.45
+      value: 58.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1b763b9004c96c44bec2f7601102e8a, type: 3}
@@ -454,14 +460,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1054363447827853724, guid: b1b763b9004c96c44bec2f7601102e8a, type: 3}
   m_PrefabInstance: {fileID: 8747537999748563909}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3348345373933487212 stripped
+--- !u!114 &382087594456709567 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6274298328425318313, guid: b1b763b9004c96c44bec2f7601102e8a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8946415856751114874, guid: b1b763b9004c96c44bec2f7601102e8a, type: 3}
   m_PrefabInstance: {fileID: 8747537999748563909}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 4db7ba49490732a4bbea880a563cfafd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2397133417912235106}
   - component: {fileID: 750513776965454934}
   - component: {fileID: 6274298328425318313}
+  - component: {fileID: 8946415856751114874}
   m_Layer: 5
   m_Name: TabButton
   m_TagString: Untagged
@@ -96,12 +97,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.24973297, g: 0.66203475, b: 0.8679245, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -121,6 +122,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8946415856751114874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468794782606401402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db7ba49490732a4bbea880a563cfafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clickTabEvent: {fileID: 11400000, guid: 1d9a5b25dafe57348a3636627e6d5b53, type: 2}
+  _enterTabEvent: {fileID: 11400000, guid: 9edd6d9f1dbe9274b9a4b6268e3bad6b, type: 2}
+  _exitTabEvent: {fileID: 11400000, guid: 741393cdc3b2bad4eb168cdb2d61e050, type: 2}
+  _background: {fileID: 750513776965454934}
+  _button: {fileID: 6274298328425318313}
 --- !u!1 &6794085190502244973
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +232,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.8
+  m_fontSize: 58.4
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
