@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private VoidEventChannelSO _openAgencyScreenEvent = default;
     [SerializeField] private VoidEventChannelSO _closeAgencyScreenEvent = default;
 
+    [SerializeField] private MissionEventChannelSO _missionLoadoutRequest = default;
+
     private void OnEnable()
     {
         //Check if the event exists to avoid errors
@@ -19,25 +21,35 @@ public class UIManager : MonoBehaviour
         {
             _closeAgencyScreenEvent.OnEventRaised += CloseAgencyScreen;
         }
-
+        if (_missionLoadoutRequest != null)
+        {
+            _missionLoadoutRequest.OnEventRaised += OpenMissionLoadoutScreen;
+        }
     }
 
     private void Start()
     {
+        agencyPanel.gameObject.SetActive(true);
+        missionLoadoutPanel.gameObject.SetActive(false);
     }
 
-    [SerializeField]
-    private AgencyUIManager agencyPanel = default;
+    [SerializeField] private AgencyUIManager agencyPanel = default;
+    [SerializeField] private MissionLoadoutUIManager missionLoadoutPanel = default;
 
     void OpenAgencyScreen()
     {
         agencyPanel.gameObject.SetActive(true);
-
-        //agencyPanel.FillInventory();
     }
 
     public void CloseAgencyScreen()
     {
         agencyPanel.gameObject.SetActive(false);
+    }
+
+    void OpenMissionLoadoutScreen(Mission mission)
+    {
+        agencyPanel.gameObject.SetActive(false);
+        missionLoadoutPanel.gameObject.SetActive(true);
+        missionLoadoutPanel.Set(mission);
     }
 }

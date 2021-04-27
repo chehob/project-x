@@ -12,7 +12,7 @@ public class Startup
         LocalizationSettings.InitializationOperation.Completed += op =>
         {
             var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault();
-            LocalizationSettings.Instance.SetSelectedLocale(locale);
+            LocalizationSettings.Instance.SetSelectedLocale(locale);            
         };        
     }
 }

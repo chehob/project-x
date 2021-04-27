@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 [CreateAssetMenu(fileName = "Agency", menuName = "Agency/Agency", order = 51)]
 public class Agency : ScriptableObject
@@ -11,6 +12,16 @@ public class Agency : ScriptableObject
 
     public List<Case> Cases => _cases;
     public List<Agent> Agents => _agents;
+
+    private void OnEnable()
+    {
+        LocalizationSettings.Instance.OnSelectedLocaleChanged += loc => { OnValidate(); };
+    }
+
+    private void OnDisable()
+    {
+        LocalizationSettings.Instance.OnSelectedLocaleChanged -= loc => { OnValidate(); };
+    }
 
     void OnValidate()
     {

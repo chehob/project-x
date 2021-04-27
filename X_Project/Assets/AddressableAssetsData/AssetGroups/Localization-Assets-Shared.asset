@@ -41,6 +41,13 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: c1c9af5f7193164409fd09786d29e03d
+    m_Address: Assets/LocalizationFiles/StringTables/MissionLoadoutScreen/MissionLoadoutScreen
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: f7a72967e22d41642b301dcb110261a3, type: 2}
   m_SchemaSet:

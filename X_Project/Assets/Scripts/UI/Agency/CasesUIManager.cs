@@ -4,29 +4,18 @@ using UnityEngine;
 
 public class CasesUIManager : MonoBehaviour
 {
-    [SerializeField]
-    private Agency _currentAgency = default;
-
-    [SerializeField]
-    private CaseDisplay _casePrefab = default;
-
-    [SerializeField]
-    private MissionDisplay _missionPrefab = default;
-
-    [SerializeField]
-    private Transform _casesContentPanel;
-
-    [SerializeField]
-    private Transform _missionsContentPanel;
+    [SerializeField] private Agency _currentAgency = default;
+    [SerializeField] private CaseDisplay _casePrefab = default;
+    [SerializeField] private MissionDisplay _missionPrefab = default;
+    [SerializeField] private Transform _casesContentPanel;
+    [SerializeField] private Transform _missionsContentPanel;
 
     private Dictionary<Case, CaseDisplay> _casesDisplayed =
             new Dictionary<Case, CaseDisplay>();
-
     private Dictionary<Mission, MissionDisplay> _missionsDisplayed =
             new Dictionary<Mission, MissionDisplay>();
 
-    [SerializeField]
-    private CaseEventChannelSO _caseClickEvent = default;
+    [SerializeField] private CaseEventChannelSO _caseClickEvent = default;
 
     public void OnEnable()
     {
@@ -44,8 +33,6 @@ public class CasesUIManager : MonoBehaviour
         {
             _caseClickEvent.OnEventRaised -= OnCaseClick;
         }
-
-        //ClearCaseDisplay();
     }
 
     private void UpdateCaseDisplay()
@@ -63,8 +50,6 @@ public class CasesUIManager : MonoBehaviour
     {
         foreach (var itemDisplayed in _casesDisplayed)
         {
-            //var itemDisplay = itemDisplayed.Value;
-            //itemDisplay.Button.onClick.RemoveListener(itemDisplay.ButtonAction);
             Destroy(itemDisplayed.Value.gameObject);
         }
 
@@ -75,8 +60,6 @@ public class CasesUIManager : MonoBehaviour
     {
         var obj = Instantiate(_casePrefab, _casesContentPanel);
         obj.Set(item);
-        //obj.ButtonAction = () => { OnItemClick(item); };
-        //obj.Button.onClick.AddListener(obj.ButtonAction);
         _casesDisplayed.Add(item, obj);
     }
 
@@ -100,8 +83,6 @@ public class CasesUIManager : MonoBehaviour
     {
         foreach (var itemDisplayed in _missionsDisplayed)
         {
-            //var itemDisplay = itemDisplayed.Value;
-            //itemDisplay.Button.onClick.RemoveListener(itemDisplay.ButtonAction);
             Destroy(itemDisplayed.Value.gameObject);
         }
 
@@ -112,8 +93,6 @@ public class CasesUIManager : MonoBehaviour
     {
         var obj = Instantiate(_missionPrefab, _missionsContentPanel);
         obj.Set(item);
-        //obj.ButtonAction = () => { OnItemClick(item); };
-        //obj.Button.onClick.AddListener(obj.ButtonAction);
         _missionsDisplayed.Add(item, obj);
     }
 }

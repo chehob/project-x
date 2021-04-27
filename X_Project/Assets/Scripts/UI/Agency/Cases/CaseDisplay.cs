@@ -9,8 +9,7 @@ public class CaseDisplay : MonoBehaviour
 
     [SerializeField] private LocalizeStringEvent _nameText;
 
-    [SerializeField]
-    private CaseEventChannelSO _caseClickEvent = default;
+    [SerializeField] private CaseEventChannelSO _caseClickEvent = default;
 
     public void Set(Case _case)
     {

@@ -15,7 +15,7 @@ MonoBehaviour:
   _cases:
   - {fileID: 11400000, guid: 36d0620df259d9941922772bc91a603b, type: 2}
   _agents:
-  - _name: Mulder
+  - _name: "\u041C\u0430\u043B\u0434\u0435\u0440"
     _presetData: {fileID: 11400000, guid: ffe19d9b4134af14e88c1c21e86db3f7, type: 2}
-  - _name: Scully
+  - _name: "\u0421\u043A\u0430\u043B\u043B\u0438"
     _presetData: {fileID: 11400000, guid: 5ad0923df37396f4c9a99dc682f2ea1c, type: 2}

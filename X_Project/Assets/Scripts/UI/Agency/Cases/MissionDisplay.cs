@@ -9,8 +9,7 @@ public class MissionDisplay : MonoBehaviour
 
     [SerializeField] private LocalizeStringEvent _nameText;
 
-    [SerializeField]
-    private MissionEventChannelSO _missionClickEvent = default;
+    [SerializeField] private MissionEventChannelSO _missionClickEvent = default;
 
     public void Set(Mission mission)
     {
